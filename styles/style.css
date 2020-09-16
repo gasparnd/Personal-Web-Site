@@ -1,0 +1,442 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600&display=swap');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ds5axh');
+  src:  url('../fonts/icomoon.eot?ds5axh#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ds5axh') format('truetype'),
+    url('../fonts/icomoon.woff?ds5axh') format('woff'),
+    url('../fonts/icomoon.svg?ds5axh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-medium:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\e902";
+}
+.icon-twitter:before {
+  content: "\e904";
+}
+.icon-linkedin:before {
+  content: "\e901";
+}
+.icon-codepen:before {
+  content: "\e903";
+}
+.icon-menu:before {
+  content: "\e905";
+}
+
+
+/*
+ colour= #2ed9a3;
+ colour dark= #088a61;
+*/
+
+* {
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto Mono', monospace;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	text-decoration: none;
+	background-color: yellow;
+	font-weight: bold;
+}
+
+h1,
+h2 {
+	letter-spacing: -1px;
+}
+
+.wrapper {
+	padding: 0 100px;
+}
+
+@media screen and (max-width:1024px) {
+
+	.wrapper {
+		padding: 0 2em;
+	}
+}
+
+
+/*///////////
+
+	HEADER
+
+///////////*/
+
+.header {
+	height: 70px;	
+	background-color: white;
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+}
+
+.header_menu a {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+.header_name {
+	text-transform: uppercase;
+	font-size: 25px;
+}
+
+.header_line {
+	display: block;
+	color: rgb(25,25,25);
+}
+
+.burger-menu {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+	line-height: 50px;
+	text-align: center;
+	position: fixed;
+	z-index: 3;
+	bottom: 20%;
+	right: 10%;
+	display: none
+}
+
+@media screen and (max-width:1024px) {
+	
+}
+
+@media screen and (max-width: 767px) {
+
+	.header {
+		display: block;
+		text-align: center;
+		height: auto;
+		padding: 1em .3em;
+		position: initial;
+	}
+	.burger-menu {
+		display: initial;
+	}
+
+	.header_menu {
+		position: fixed;
+		bottom: 30%;
+		right: -100vw;
+		width: auto;
+		height: 50px;
+		z-index: 2;
+		background-color: rgba(0,0,0,0.8);
+		border-radius: 10px;
+		border-bottom-right-radius: 0; 
+		transition: 0.3s;
+		text-align: left;
+		display: flex;
+		align-items: center;
+	}
+
+	.header_menu a {
+		font-size: 1.5em;
+		color: white;
+		z-index: 4;
+		margin: 0 .3em;
+		text-decoration: none;
+	}
+
+	.is-active {
+		right: 20%;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	
+
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
+/*////////////
+
+	HERO
+
+////////////*/
+
+.hero {
+	height: 100vh;
+}
+
+.hero_title {
+	font-size: 50px;
+	padding-top: 2em;
+}
+
+@media screen and (max-width: 768px) {
+
+	.hero {
+		height: auto;
+		margin: 3em 0 5em;
+	}
+
+	.hero_title {
+		font-size: 2.3em;
+		padding: 0;
+	}
+
+	.hero_title strong {
+		font-size: 1em;
+		color: black;
+		text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+		.hero_title {
+			font-size: 2em;
+		}
+}
+
+@media screen and (max-width: 320px) {
+
+		.hero_title {
+			font-size: 1.5em;
+		}
+}
+
+/*//////////////////////////
+
+			ABOUT
+
+//////////////////////////*/
+
+.about {
+	padding-bottom: 100px; 
+}
+
+.about_title {
+	margin-bottom: 30px;
+	font-size: 30px;
+}
+
+.about_description strong {
+	margin-top: 10px;
+	font-size: 22px;
+	color: rgb(25,25,25);
+}
+
+.about_description {
+	font-size: 18px;
+}
+
+@media screen and (max-width:1024px) {
+
+	.about {
+		height: auto;
+		width: auto;
+		padding-bottom: 0
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.about_title {
+		font-size: 1.5em;
+	}
+
+	.about_description {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 320px) {
+
+
+}
+
+/*////////////////////////////////////
+	
+		CONTACT
+
+////////////////////////////////////*/
+
+.contact {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+	box-sizing: border-box;
+}
+
+.contact_social {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+}
+
+.contact_social-link {
+	width: 200px;
+	height: 200px;
+	border-radius: 15px;
+	margin: .8em;
+	text-decoration: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap-reverse;
+	box-shadow: 1px 1px 5px  grey;
+}
+
+.contact_social-link-title,
+.social-icon {
+	color: black;
+	text-align: center;
+}
+
+.social-icon {
+	font-size: 2em;
+}
+
+.contact_social-link:hover {
+	box-shadow: 1px 1px 10px  grey;
+	background-color: transparent;
+	color: #2ed9a3;
+	text-decoration: none;
+}
+
+.contact_titleWrapper {
+	box-sizing: border-box;
+	width: 50%;
+	padding-left: 1em;
+}
+
+.contact_title {
+	padding: 50px 0 40px;
+}
+
+@media screen and (max-width:1024px) {
+
+	.contact {
+		margin: 3em 0 1em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.contact_social {
+		width: auto;
+	}
+
+	.contact_title {
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 768px) {
+
+	.contact {
+		/*display: block;	*/
+		text-align: center;
+	}
+
+	.contact_social {
+		justify-content: center;
+		align-items: center;
+		width: auto;
+	}
+
+	.contact_titleWrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+	.contact_title {
+		font-size: 1.4em;
+			}
+}
+
+@media screen and (max-width: 320px) {
+
+}
+
+
+/*///////////////////////////////
+
+			FOOTER
+
+///////////////////////////////*/
+
+
+.footer {
+
+	margin: 50px 0;
+	display: flex;
+	align-items: center;
+}
+
+.footer_wrapper-description {
+
+}
+
+@media screen and (max-width:1024px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
+	.footer_wrapper-description {
+		font-size: 0.9em;
+	}
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
+@media screen and (max-width: 320px) {
+
+}

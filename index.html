@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pone como ancho predilecto el ancho del dispositivo -->
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<title>Gaspar Dolcemascolo - Front End Developer</title>
+
+</head>
+<body>
+
+	<i class="icon-menu burger-menu" id="burger-menu"></i>
+
+	<header class="header">
+
+		<a class="header_name" href="#">GasparND</a>
+		
+		<nav class="header_menu"> <!--is-active-->
+			
+			<a href="#acerca">Acerca</a>
+			<a href="#contacto">Contacto</a>
+
+		</nav>
+
+	</header>
+
+	<div class="wrapper">
+		
+		<section class="hero">
+
+			<div class="hero_wrapper">
+				
+				<h1 class="hero_title">
+					Hola, soy Gaspar Dolcemascolo 👋<br>
+					Front-End Developer.
+				</h1>
+
+			</div>
+		
+		</section>
+
+		<section class="about">
+		
+			<h2 id="acerca" class="about_title">Acerca 🐧</h2>
+
+			<p class="about_description">
+
+				<strong>
+					Amo, vivo y respiro internet. Siempre he creído que la tecnología puede cambiar al mundo y, en efecto, así es. Me encantan las empresas con productos innovadores que quieren mejorar la vida de las personas.
+				</strong>
+				<br>
+				Fuera del código me puedes encontrar jugando videojuegos, escuchando música, viendo series, <a target="_blanck" href="https://www.medium.com/@gasparnd">ocacionalmete escribiendo</a> y tratando de interactuar con mis ídolos en <a target="_blanck" href="https://twitter.com/gasparnd">Twitter</a>. <br>
+				Actualmente me encuentro en Mendoza Argentina, donde nací. Aunque he vivido en unos cuantos sitios (soy un poco nómade).
+				
+			</p>
+
+		</section>
+
+		<section id="contacto" class="contact">
+		
+			<div class="contact_social">
+			
+				<a class="contact_social-link twitter" target="_blanck" href="https://www.twitter.com/gasparnd">
+
+					<i class="icon-twitter social-icon"></i>
+
+					<h3 class="contact_social-link-title">Sigueme en twitter</h3>
+					
+				</a>
+
+				<a class="contact_social-link github" target="_blanck" href="https://www.github.com/gasparnd">
+
+					<i class="icon-github social-icon"></i>
+
+					<h3 class="contact_social-link-title">Ve mis proyectos</h3>
+
+				</a>
+
+				<a class="contact_social-link codepen" target="_blanck" href="https://www.codepen.io/gasparnd">
+
+					<i class="icon-codepen social-icon"></i>
+
+					<h3 class="contact_social-link-title">Sigue mis practicas</h3>
+
+				</a>
+
+				<a class="contact_social-link medium" target="_blanck" href="https://www.medium.com/@gasparnd">
+
+					<i class="icon-medium social-icon"></i>
+					
+					<h3 class="contact_social-link-title">Lee mis post sobre tech</h3>
+
+				</a>
+
+				<a  class="contact_social-link linkedin" target="_blanck" href="https://www.linkedin.com/in/gaspardolcemascolo">
+
+					<i class="icon-linkedin social-icon"></i>
+
+					<h3 class="contact_social-link-title">¿Nos conectamos?</h3>
+
+				</a>
+
+			</div>
+
+			<div class="contact_titleWrapper">
+
+				<h2 class="contact_title">
+					Internet es un lugar increíble, pero salvaje. No te pierdas. 👀
+				</h2>
+				
+			</div>
+
+		</section>
+
+		<footer class="footer">
+
+			<div class="footer_wrapper">
+
+				<p class="footer_wrapper-description">
+					Creado con ❤️ por <a target="_blanck" href="https://twitter.com/gasparnd">@gasparnd</a>
+				</p>
+
+			</div>
+		
+		</footer>
+
+	</div>
+
+	<script type="text/javascript">
+		
+		const menu = document.querySelector ('.header_menu');
+
+		const burgerButton = document.querySelector('#burger-menu');
+
+		const ipad = window.matchMedia(' screen and (max-width: 767px)');
+
+		ipad.addListener(validation);
+		validation(ipad);
+
+		function validation (e) {
+			if (e.matches) {
+				burgerButton.addEventListener('click', showHide);
+			} else {
+				burgerButton.removeEventListener('click', showHide);
+			}
+		}
+
+		function showHide () {
+			 
+			 if (menu.classList.contains('is-active')) {
+			 	menu.classList.remove('is-active');
+			 } else {
+			 	menu.classList.add('is-active');
+			 }
+		}
+
+	</script>
+
+</body>
+</html>
