@@ -178,6 +178,10 @@ h2 {
 		text-decoration: none;
 	}
 
+	.header_menu a:hover {
+		color: black;
+	}
+
 	.is-active {
 		right: 20%;
 	}
