@@ -49,10 +49,10 @@
 				<section class="experience">
 					<ul>
 						<li>
-							<p>Miembro y colaborador: <a target="_blank" href="#">Proyecto Solidus</a></p>
+							<p>Miembro y colaborador: <a target="_blank" href="https://github.com/orgs/proyectosolidus/teams/core">Proyecto Solidus</a></p>
 						</li>
 						<li>
-							<p>Colaborador: <a target="_blank" href="#">DevFolio</a></p>
+							<p>Colaborador: <a target="_blank" href="https://github.com/gasparnd/DevFolio">DevFolio</a></p>
 						</li>
 					</ul>
 				</section>
@@ -152,7 +152,7 @@
 					</a>
 				</div>
 				<h2 class="contact_title">
-					Internet es un lugar increíble, pero salvaje. No te pierdas.
+					Internet es un lugar increíble, pero salvaje. <br/> No te pierdas.
 				</h2>
 			</div>				
 		</section>
@@ -163,25 +163,7 @@
 		</footer>
 	</main>
 
-	<script type="text/javascript">
-		
-		const menu = document.querySelector ('.header_menu')
-		const burgerButton = document.querySelector('#burger-menu')
-		const ipad = window.matchMedia(' screen and (max-width: 767px)')
-		ipad.addListener(validation)
-		validation(ipad)
-		function validation (e) {
-			if (e.matches) {
-				burgerButton.addEventListener('click', showHide)
-			} else {
-				burgerButton.removeEventListener('click', showHide)
-			}
-		}
-		function showHide () {
-			 menu.classList.toggle('is-active')
-		}
-
-	</script>
+	<script type="text/javascript" src="js/index.js"></script>
 
 </body>
 </html>
