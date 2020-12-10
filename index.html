@@ -3,7 +3,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1"> <!-- pone como ancho predilecto el ancho del dispositivo -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<title>Gaspar Dolcemascolo - Front End Developer</title>
@@ -11,149 +11,174 @@
 </head>
 <body>
 
-	<i class="icon-menu burger-menu" id="burger-menu"></i>
-
-	<header class="header">
-
-		<a class="header_name" href="#">GasparND</a>
-		
-		<nav class="header_menu"> <!--is-active-->
-			
-			<a href="#acerca">Acerca</a>
-			<a href="#contacto">Contacto</a>
-
-		</nav>
-
-	</header>
-
-	<div class="wrapper">
-		
+	<main>
+		<i class="icon-menu burger-menu" id="burger-menu"></i>
+		<header class="header">
+			<div class="header-container">
+				<a class="header_name" href="#">GasparND</a>
+				<nav class="header_menu"> <!--is-active-->
+					<a href="#acerca">Acerca</a>
+					<a href="#proyectos">Proyectos</a>
+					<a href="#contacto">Contacto</a>
+				</nav>
+				<div id="screen-mode">
+					<div></div>
+				</div>
+			</div>
+		</header>
 		<section class="hero">
-
-			<div class="hero_wrapper">
-				
+			<div class="hero-container">
 				<h1 class="hero_title">
-					Hola, soy Gaspar Dolcemascolo 👋<br>
-					Front-End Developer.
+					Hola, soy Gaspar Dolcemascolo<br>
+					<span>Front-End Developer.</span>
 				</h1>
-
 			</div>
-		
 		</section>
-
-		<section class="about">
-		
-			<h2 id="acerca" class="about_title">Acerca 🐧</h2>
-
-			<p class="about_description">
-
-				<strong>
-					Amo, vivo y respiro internet. Siempre he creído que la tecnología puede cambiar al mundo y, en efecto, así es. Me encantan las empresas con productos innovadores que quieren mejorar la vida de las personas.
-				</strong>
-				<br>
-				Fuera del código me puedes encontrar jugando videojuegos, escuchando música, viendo series, <a target="_blank" href="https://www.medium.com/@gasparnd">ocacionalmete escribiendo</a> y tratando de interactuar con mis ídolos en <a target="_blank" href="https://twitter.com/gasparnd">Twitter</a>. <br>
-				Actualmente me encuentro en Mendoza Argentina, donde nací. Aunque he vivido en unos cuantos sitios (soy un poco nómade).
-				
-			</p>
-
-		</section>
-
-		<section id="contacto" class="contact">
-		
-			<div class="contact_social">
-			
-				<a class="contact_social-link twitter" target="_blank" href="https://www.twitter.com/gasparnd">
-
-					<i class="icon-twitter social-icon"></i>
-
-					<h3 class="contact_social-link-title">Sigueme en twitter</h3>
-					
-				</a>
-
-				<a class="contact_social-link github" target="_blank" href="https://www.github.com/gasparnd">
-
-					<i class="icon-github social-icon"></i>
-
-					<h3 class="contact_social-link-title">Ve mis proyectos</h3>
-
-				</a>
-
-				<a class="contact_social-link codepen" target="_blank" href="https://www.codepen.io/gasparnd">
-
-					<i class="icon-codepen social-icon"></i>
-
-					<h3 class="contact_social-link-title">Sigue mis practicas</h3>
-
-				</a>
-
-				<a class="contact_social-link medium" target="_blank" href="https://www.medium.com/@gasparnd">
-
-					<i class="icon-medium social-icon"></i>
-					
-					<h3 class="contact_social-link-title">Lee mis post sobre tech</h3>
-
-				</a>
-
-				<a  class="contact_social-link linkedin" target="_blank" href="https://www.linkedin.com/in/gaspardolcemascolo">
-
-					<i class="icon-linkedin social-icon"></i>
-
-					<h3 class="contact_social-link-title">¿Nos conectamos?</h3>
-
-				</a>
-
-			</div>
-
-			<div class="contact_titleWrapper">
-
-				<h2 class="contact_title">
-					Internet es un lugar increíble, pero salvaje. No te pierdas. 👀
-				</h2>
-				
-			</div>
-
-		</section>
-
-		<footer class="footer">
-
-			<div class="footer_wrapper">
-
-				<p class="footer_wrapper-description">
-					Creado con ❤️ por <a target="_blank" href="https://twitter.com/gasparnd">@gasparnd</a>
+		<section class="about"  id="acerca">
+			<div class="about-container">
+				<h2 class="about_title">Acerca</h2>
+				<p class="about_description">
+					<strong>
+						Amo, vivo y respiro internet. Siempre he creído que la tecnología puede cambiar al mundo y, en efecto, así es. Me encantan las empresas con productos innovadores que quieren mejorar la vida de las personas.
+					</strong>
+					<br>
+					Fuera del código me puedes encontrar jugando videojuegos, escuchando música, viendo series, <a target="_blank" href="https://www.medium.com/@gasparnd">ocacionalmete escribiendo</a> y tratando de interactuar con mis ídolos en <a target="_blank" href="https://twitter.com/gasparnd">Twitter</a>. <br>
+					Actualmente me encuentro en Mendoza Argentina, donde nací. Aunque he vivido en unos cuantos sitios (soy un poco nómade).
 				</p>
-
+				<h2>Open Source</h2>
+				<section class="experience">
+					<ul>
+						<li>
+							<p>Miembro y colaborador: <a target="_blank" href="#">Proyecto Solidus</a></p>
+						</li>
+						<li>
+							<p>Colaborador: <a target="_blank" href="#">DevFolio</a></p>
+						</li>
+					</ul>
+				</section>
 			</div>
-		
+		</section>
+		<section class="projects" id="proyectos">
+			<div class="projects-container">
+				<h2>Proyectos Destacados</h2>
+				<div class="projects-carrucel">
+					<article class="project">
+						<a target="_blank" href="https://github.com/gasparnd/100tifico">
+							<h3>100TifiCo</h3>
+							<p>
+								Una Single Page Application creada con Vanilla JavaScript. Esta app muestra información de los personajes de la serie Rick & Morty, que es traída a través de una API. 
+							</p>
+							<div class="tags">
+								<div class="html tecnology">
+									<span></span>
+									<p>HTML</p>
+								</div>
+								<div class="css tecnology">
+								    <span></span>
+									<p>CSS</p>
+								</div>
+								<div class="javascript tecnology">
+									<span></span>
+									<p>JS</p>
+								</div>
+								<div class="apis tecnology">
+									<span></span>
+									<p>API'S</p>
+								</div>
+							</div>	
+						</a>
+					</article>
+					<article class="project">
+						<a target="_blank" href="https://github.com/gasparnd/Encriptame">
+							<h3>Encriptame</h3>
+							<p>
+								Encriptame es un proyecto creado con la finalidad de encriptar y desencriptar mensajes. Esta creado con Vanilla JavaScript y su deploy en Vercel.
+							</p>
+							<div class="tags">
+								<div class="html tecnology">
+									<span></span>
+									<p>HTML</p>
+								</div>
+								<div class="css tecnology">
+								    <span></span>
+									<p>CSS</p>
+								</div>
+								<div class="javascript tecnology">
+									<span></span>
+									<p>JS</p>
+								</div>
+							</div>	
+						</a>
+					</article>
+					<article class="project">
+						<a target="_blank" href="https://github.com/gasparnd/To-Do-List">
+							<h3>To-Do List</h3>
+							<p>
+								El típico To-Do List, con un diseño nominalista e inspirado en el buscador de Google. Creado con Vanilla JavaScript y su deploy en Vercel.
+							</p>
+							<div class="tags">
+								<div class="html tecnology">
+									<span></span>
+									<p>HTML</p>
+								</div>
+								<div class="css tecnology">
+								    <span></span>
+									<p>CSS</p>
+								</div>
+								<div class="javascript tecnology">
+									<span></span>
+									<p>JS</p>
+								</div>
+							</div>	
+						</a>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="contact" id="contacto">
+			<div class="contact-container">
+				<div class="social-media">
+					<a class="social-media-link twitter" target="_blank" href="https://www.twitter.com/gasparnd">
+						<i class="icon-twitter social-icon"></i>	
+					</a>
+					<a class="social-media-link github" target="_blank" href="https://www.github.com/gasparnd">
+						<i class="icon-github social-icon"></i>
+					</a>
+					<a class="social-media-link codepen" target="_blank" href="https://www.codepen.io/gasparnd">
+						<i class="icon-codepen social-icon"></i>
+					</a>
+					<a  class="social-media-link linkedin" target="_blank" href="https://www.linkedin.com/in/gaspardolcemascolo">
+						<i class="icon-linkedin social-icon"></i>
+					</a>
+				</div>
+				<h2 class="contact_title">
+					Internet es un lugar increíble, pero salvaje. No te pierdas.
+				</h2>
+			</div>				
+		</section>
+		<footer class="footer">
+			<p class="footer_wrapper-description">
+				Creado con ❤️ por <a target="_blank" href="https://twitter.com/gasparnd">@gasparnd</a>
+			</p>
 		</footer>
-
-	</div>
+	</main>
 
 	<script type="text/javascript">
 		
-		const menu = document.querySelector ('.header_menu');
-
-		const burgerButton = document.querySelector('#burger-menu');
-
-		const ipad = window.matchMedia(' screen and (max-width: 767px)');
-
-		ipad.addListener(validation);
-		validation(ipad);
-
+		const menu = document.querySelector ('.header_menu')
+		const burgerButton = document.querySelector('#burger-menu')
+		const ipad = window.matchMedia(' screen and (max-width: 767px)')
+		ipad.addListener(validation)
+		validation(ipad)
 		function validation (e) {
 			if (e.matches) {
-				burgerButton.addEventListener('click', showHide);
+				burgerButton.addEventListener('click', showHide)
 			} else {
-				burgerButton.removeEventListener('click', showHide);
+				burgerButton.removeEventListener('click', showHide)
 			}
 		}
-
 		function showHide () {
-			 
-			 if (menu.classList.contains('is-active')) {
-			 	menu.classList.remove('is-active');
-			 } else {
-			 	menu.classList.add('is-active');
-			 }
+			 menu.classList.toggle('is-active')
 		}
 
 	</script>
