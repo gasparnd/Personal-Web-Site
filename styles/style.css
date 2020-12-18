@@ -48,19 +48,14 @@
 }
 
 
-/*
- colour= #2ed9a3;
- colour dark= #088a61;
-*/
-
 :root {
 	--background-color: #010101;
-	--text-color: #c9d1d9;
+	--text-color: #c9d1d9; 
 	--blue: #58a6ff;
 	--background-color-2: #0d1117;
 	--border: #30363d;
-	--tags-background-color: #33313b;
-	--hover-background-color:#222831;
+	--tags-background-color: #33313b; 
+	--hover-background-color:#222831; 
 }
 
 * {
@@ -117,12 +112,13 @@ main {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	background: color: var(--background-color);
+	background: var(--background-color);
+	padding: 0 1rem;
 }
 
 .header-container {
-	grid-template-columns: 1fr 1fr;
-	grid-template-areas: 'logo menu';
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-areas: 'logo menu screen-mode';
 	display: grid;
 	height: 4rem;	
 	align-items: center;
@@ -131,13 +127,13 @@ main {
 .header_menu {
 	grid-area: menu;
 	width: max-content;
-	justify-self: end;
+	justify-self: center;
 }
 
 .header_menu a {
 	margin-left: 20px;
 	font-size: 20px;
-	color: white;
+	color: var(--text-color);
 }
 
 .header_name {
@@ -145,27 +141,33 @@ main {
 	font-size: 25px;
 	grid-area: logo;
 	width: max-content;
-	color: white;
+	color: var(--text-color);
 }
 
-#screen-mode {
-	width: 70%;
+.screen-mode {
+	width: 5rem;
 	height: 2rem;
+	padding: 1rem 0;
 	border-radius: 50px;
-	background-color: #33313b;
+	background-color: var(--blue);
+	border: 1px solid var(--blue);
 	grid-area: screen-mode;
+	justify-self: flex-end;
 	display: flex;
-	align-items: center;
 	justify-content: flex-end;
+	align-items: center;
 	cursor: pointer;
-	display: none;
 }
 
-#screen-mode div {
+.screen-mode div {
 	width: 1.5rem;
 	height: 1.5rem;
-	background-color: #010101;
-	border-radius: 50px;
+	background-color: var(--text-color);
+	border-radius: 50%;
+}
+
+.light {
+	justify-content: flex-start;
 }
 
 .burger-menu {
@@ -196,9 +198,13 @@ main {
 	}
 
 	.header-container {
-		grid-template-columns: 1fr;
-		grid-template-areas: 'logo';
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas: 'logo screen-mode';
 		justify-items: center;
+	}
+
+	.screen-mode {
+		justify-self: center;
 	}
 
 	.burger-menu {
@@ -317,17 +323,22 @@ main {
 }
 
 .about_description strong {
-	margin-top: 10px;
-	font-size: 22px;
+	margin-top: 1rem;
+	font-size: 1.5rem;
 }
 
 .about_description {
-	font-size: 18px;
+	font-size: 1.3rem;
 	grid-area: about;
 }
 
 .experience {
 	grid-area: experience;
+	font-size: 1.3rem;
+}
+
+.experience p {
+
 }
 
 .experience h2 {
@@ -528,12 +539,11 @@ main {
 	align-items: center;
 	justify-content: center;
 	text-decoration: none;
-	color: white;
+	color: var(--text-color);
 }
 
 .social-media-link:hover {
 	background: var(--hover-background-color);
-	color: var(--text-color);
 	text-decoration: none;
 }
 
