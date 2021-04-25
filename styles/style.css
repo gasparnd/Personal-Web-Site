@@ -47,15 +47,18 @@
   content: "\e905";
 }
 
-
 :root {
-	--background-color: #010101;
+	--background-color: #0f1123;
 	--text-color: #c9d1d9; 
 	--blue: #58a6ff;
 	--background-color-2: #0d1117;
 	--border: #30363d;
 	--tags-background-color: #33313b; 
 	--hover-background-color:#222831; 
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -93,7 +96,7 @@ h2 {
 	font-size: 2rem;
 }
 
-main {
+.container {
 	display: grid;
 	grid-template-columns: minmax(auto, 1024px);
 	justify-content: center;
@@ -117,8 +120,8 @@ main {
 }
 
 .header-container {
-	grid-template-columns: 1fr 2fr 1fr;
-	grid-template-areas: 'logo menu screen-mode';
+	grid-template-columns: 1fr 2fr;
+	grid-template-areas: 'logo menu';
 	display: grid;
 	height: 4rem;	
 	align-items: center;
@@ -142,32 +145,6 @@ main {
 	grid-area: logo;
 	width: max-content;
 	color: var(--text-color);
-}
-
-.screen-mode {
-	width: 5rem;
-	height: 2rem;
-	padding: 1rem 0;
-	border-radius: 50px;
-	background-color: var(--blue);
-	border: 1px solid var(--blue);
-	grid-area: screen-mode;
-	justify-self: flex-end;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
-	cursor: pointer;
-}
-
-.screen-mode div {
-	width: 1.5rem;
-	height: 1.5rem;
-	background-color: var(--text-color);
-	border-radius: 50%;
-}
-
-.light {
-	justify-content: flex-start;
 }
 
 .burger-menu {
@@ -313,7 +290,7 @@ main {
 	grid-template-rows: auto 1fr;
 	grid-template-areas: 'title experience-title' 
 						 'about experience';
-	grid-gap: 1rem;
+	grid-gap: 2rem;
 	padding: 2rem 1rem;
 	margin-top: 4rem;
 }
@@ -348,11 +325,6 @@ main {
 
 .experience ul {
 	list-style: none;
-}
-
-@media screen and (max-width:1024px) {
-
-	
 }
 
 @media screen and (max-width: 766px) {
@@ -431,7 +403,6 @@ main {
 .project {
 	padding: 1rem;
 	border-radius: 15px;
-	width: 30rem;
 	height: auto;
 	background: var(--background-color);
 }
@@ -478,6 +449,18 @@ main {
 
 .javascript span {
 	background: yellow;
+}
+
+.react span {
+	background: #61dafb;
+}
+
+.redux span {
+	background: #764abc;
+}
+
+.typescript span {
+	background: #3178c6;
 }
 
 .apis span {
